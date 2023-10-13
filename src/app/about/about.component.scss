@@ -1,0 +1,65 @@
+.container {
+    position: relative;
+    object-fit: cover;
+    background: url("../../assets/about-1.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4rem;
+    height: calc(100vh - 8rem);
+    width: calc(100vw - 8rem);
+}
+
+.about-description {
+    margin: auto;
+    display: block;
+    width: 45%;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 48px;
+    font-family: monospace;
+    background: linear-gradient(92.17deg, #FFFFFF -1.32%, #FF7898 56.11%, #DE5CFF 104.71%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.connector
+{
+    position: absolute;
+    bottom: -10px;
+    right: -5px;
+    display: none;
+    color: #DE5CFF;
+}
+
+.skills-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    width: 100%;
+
+    .skills:not(:nth-last-child(1))
+    {
+        border: .5px rgba(255, 255, 255, 0.081) solid;
+        .connector{
+            display: block;
+        }
+    }
+}
+
+.skills {
+    position: relative;
+    grid-row: 1/1;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.0005) 100%),
+        linear-gradient(0deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.04));
+    height: 7.5rem;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

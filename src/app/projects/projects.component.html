@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="title">
+        Projects
+    </div>
+    <div class="project-region">
+        <div *ngFor="let project of projects; index as i"  [ngClass]="i == 3 ? 'highlight' : 'project-card'">
+            <div>
+                <div class="project-header">
+                    <div class="image">
+                        <img src="assets/{{project.logo}}.png" [alt]="project.title">
+                    </div>
+                    <div>{{project.title}}</div>
+                </div>
+                <div>
+                    {{project.description}}
+                </div>
+            </div>
+      
+            <div class="project-skills">
+                <div *ngFor="let skill of project.skills">{{skill}}</div>
+            </div>
+        </div>
+    </div>
+</div>

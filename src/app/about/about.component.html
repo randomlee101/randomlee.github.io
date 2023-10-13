@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="title">About</div>
+    <div class="about-description">
+        Hello, I’m Daniel Folorunso. I am a passionate and experienced developer with a strong focus on creating
+        user-friendly and innovative web solutions. With a keen eye for detail and a love for problem-solving, I strive
+        to deliver high-quality projects that exceed client expectations. From front-end development to back-end
+        programming, I am proficient in a wide range of technologies and languages, ensuring that I can tackle any
+        challenge that comes my way.
+        <br/>
+        <br/>
+        I am dedicated to continuous learning and growth in the ever-evolving field of web development, and I am excited
+        to collaborate on exciting projects with like-minded individuals and organizations
+    </div>
+    <div class="skills-row">
+        <div class="skills"  *ngFor="let i of allSkills">
+            <div><img src="assets/{{i.icon}}.png" [alt]="i.name"></div>
+            <div>{{i.name}}</div>
+            <div class="connector">&plus;</div>
+        </div>
+    </div>
+</div>
